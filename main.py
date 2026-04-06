@@ -4,8 +4,9 @@
 # Coder: Afsha Sayyed
 # Date:10/02/2026
 
-print("--- Extracting Words from Text File ---\n")
-n = int(input())
+print("--- Extracting Words from Text File ---")
+
+n = int(input("Enter Length of Words: "))
 
 file = open("story.txt", "r")
 data = file.read().lower()
@@ -21,4 +22,4 @@ for word in words:
 
 result = sorted(result)
 
-print(result)
+print(f"Words with length {n} are: {result}")
