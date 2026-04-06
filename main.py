@@ -5,18 +5,11 @@
 # Date:10/02/2026
 
 print("--- Extracting Words from Text File ---\n")
-n = int(input("Enter Length of Words: "))
+n = int(input())
 
 file = open("story.txt", "r")
-data = file.read()
+data = file.read().lower()
 file.close()
-
-# convert to lowercase
-data = data.lower()
-
-# remove punctuation
-for ch in ",.!?\"":
-    data = data.replace(ch, "")
 
 words = data.split()
 
@@ -28,4 +21,4 @@ for word in words:
 
 result = sorted(result)
 
-print(f"Words with length {n} are: {result}")
+print(result)
